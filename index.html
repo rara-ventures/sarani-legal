@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sarani — A private journal shaped like chat</title>
+<meta name="description" content="Sarani is an encrypted, local-first journal shaped like a conversation. Each entry is a bubble. Each day is a thread. Nothing leaves your iPhone.">
+<style>
+  :root { --ink:#14110f; --muted:#6b625a; --line:#e8e0d7; --brand:#e56100; --brand-soft:#fff1e6; --paper:#faf7f2; --card:#fffdfa; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--paper); }
+  .wrap { width:min(780px,calc(100% - 40px)); margin:0 auto; }
+  header { padding:72px 0 52px; background:radial-gradient(120% 120% at 50% 0%,#fff6ec 0%,var(--paper) 62%); border-bottom:1px solid var(--line); }
+  .mark { display:inline-flex; align-items:center; gap:12px; }
+  .disc { width:46px; height:46px; border-radius:23px; background:linear-gradient(180deg,#ffa24d,#e56100); color:#fff; font-weight:600; font-size:24px; display:flex; align-items:center; justify-content:center; box-shadow:0 12px 28px rgba(229,97,0,.28); }
+  .badge { font-size:13px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--brand); }
+  h1 { font-size:clamp(36px,6.3vw,58px); line-height:1.03; letter-spacing:-.035em; margin:22px 0 16px; max-width:15ch; }
+  h2 { font-size:24px; letter-spacing:-.02em; margin:40px 0 10px; }
+  h3 { font-size:18px; margin:26px 0 6px; }
+  p, li { color:var(--muted); }
+  a { color:#b84a00; }
+  .lead { font-size:20px; color:#463c35; max-width:58ch; }
+  .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
+  .btn { display:inline-block; text-decoration:none; font-weight:700; padding:13px 19px; border-radius:12px; background:var(--brand); color:#fff; }
+  .btn.secondary { background:#fff; color:#b84a00; border:2px solid #f3c9a6; }
+  main { padding:48px 0 76px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin:24px 0; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:20px; }
+  .card strong { display:block; color:var(--ink); margin-bottom:5px; }
+  .card p { margin:0; font-size:15px; }
+  .example { background:var(--ink); color:#f7f1e8; border-radius:20px; padding:22px 24px; margin:26px 0; font-size:16px; }
+  .example .bubble { background:#241f1b; border-radius:18px 18px 18px 5px; padding:12px 15px; margin:10px 0; color:#f7f1e8; }
+  .example .filed { margin-left:26px; background:#2e2721; border-radius:18px 18px 5px 18px; padding:12px 15px; color:#f4d7bd; font-size:14px; }
+  .example .label { font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#bfae9b; }
+  footer { border-top:1px solid var(--line); padding:30px 0 50px; font-size:14px; color:var(--muted); }
+  footer nav { display:flex; gap:18px; flex-wrap:wrap; margin-bottom:10px; }
+  footer a { color:var(--muted); }
+  ul { padding-left:20px; }
+  .note { background:#fffbe8; border:1px solid #f0e2a8; border-radius:12px; padding:14px 16px; color:#6b5b13; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="mark"><span class="disc">S</span><span class="badge">Sarani</span></div>
+    <h1>A journal shaped like a conversation.</h1>
+    <p class="lead">Each entry is a bubble. Each day is a thread. Sarani is private by design: your words, photos, voice notes and video are encrypted on your iPhone, and nothing is sent to us.</p>
+    <div class="actions">
+      <a class="btn" href="support.html">Get support</a>
+      <a class="btn secondary" href="privacy.html">Read the privacy policy</a>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <h2>Write it the way you would say it</h2>
+  <p>No forms, no notebooks, no blank page. The composer is a message field. A day is a thread you can scroll back through, and it ends at 4:00 AM so a late night still belongs to the evening it started in.</p>
+
+  <div class="example" aria-label="Example of a journal entry becoming a filed record">
+    <div class="label">Today</div>
+    <div class="bubble">lamb rogan josh 6/7, angel indian, today with gabi</div>
+    <div class="filed">Filed as a meal · Angel Indian · 6 of 7 · with Gabi</div>
+  </div>
+
+  <p>Type a line that records something and Sarani offers to file it as a record — a meal, a purchase, something you watched, a person or a place. The entry stays exactly as you wrote it. The card underneath is an offer, never an edit.</p>
+
+  <h2>More than a feed</h2>
+  <div class="grid">
+    <div class="card"><strong>Photos, voice and video</strong><p>Add a photo, record a voice note transcribed on the device, or keep a video's words and still frame.</p></div>
+    <div class="card"><strong>Tables that build themselves</strong><p>Meals, purchases and watches become rows you can sort, filter and compare, with a page for every person and place.</p></div>
+    <div class="card"><strong>Search that remembers</strong><p>Full-text search over everything you have written, with the day and the thread always in reach.</p></div>
+    <div class="card"><strong>Optional connections</strong><p>Mirror Apple Health State of Mind, pull in Journaling Suggestions, or connect Simkl for films and TV.</p></div>
+  </div>
+
+  <h2>Private by default</h2>
+  <p>The journal is a SQLCipher database encrypted with keys held in the iOS Keychain. There is no account, no sync, no server and no analytics. We cannot read your journal, and we do not want to. Read the <a href="privacy.html">privacy policy</a> for exactly what stays on the device and what happens when you choose to connect a service.</p>
+
+  <h2>Requirements</h2>
+  <p>iPhone or iPad running iOS 17 or later. Voice transcription, Journaling Suggestions and Health mood mirroring use Apple frameworks and may need a newer iOS version. There is no Android version at launch.</p>
+</main>
+<footer class="wrap">
+  <nav><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+  <div>© 2026 Rara Ventures LLC. Sarani is not affiliated with Apple. Apple, iPhone, iPad, Apple Health and Journaling Suggestions are trademarks of Apple Inc.</div>
+</footer>
+</body>
+</html>

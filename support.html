@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Sarani</title>
+<style>
+  :root { --ink:#14110f; --muted:#6b625a; --line:#e8e0d7; --brand:#e56100; --soft:#fff1e6; --paper:#faf7f2; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:17px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--paper); }
+  .wrap { width:min(780px,calc(100% - 40px)); margin:0 auto; }
+  header { padding:60px 0 32px; border-bottom:1px solid var(--line); background:linear-gradient(170deg,#fff6ec,#faf7f2 72%); }
+  h1 { font-size:clamp(34px,6vw,48px); line-height:1.06; letter-spacing:-.03em; margin:14px 0 8px; }
+  h2 { font-size:22px; letter-spacing:-.02em; margin:36px 0 10px; }
+  h3 { font-size:18px; margin:24px 0 4px; }
+  p, li { color:var(--muted); }
+  a { color:#b84a00; }
+  .badge { display:inline-block; font-size:13px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--brand); }
+  .meta { font-size:14px; color:#8a7f75; margin:0; }
+  main { padding:8px 0 68px; }
+  .contact { background:var(--soft); border:1px solid #f3d3b8; border-radius:18px; padding:20px 22px; margin:26px 0; }
+  .contact p { color:#4b3a2c; margin:0 0 10px; }
+  .contact a.btn { display:inline-block; text-decoration:none; font-weight:700; padding:12px 18px; border-radius:12px; background:var(--brand); color:#fff; }
+  .faq { border-top:1px solid var(--line); padding-top:8px; }
+  .faq h3 { margin-top:24px; }
+  ul { padding-left:22px; }
+  li { margin:6px 0; }
+  footer { border-top:1px solid var(--line); padding:28px 0 48px; font-size:14px; color:var(--muted); }
+  footer nav { display:flex; gap:18px; flex-wrap:wrap; margin-bottom:8px; }
+  footer a { color:var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="badge">Sarani</span>
+    <h1>Support</h1>
+    <p class="meta">Rara Ventures LLC · replies usually within two business days</p>
+  </div>
+</header>
+<main class="wrap">
+  <div class="contact">
+    <p><strong>Need help, found a bug, or want to suggest something?</strong> Email us and include your iOS version, device model, and what you were doing when it happened.</p>
+    <a class="btn" href="mailto:raraventuresllc@gmail.com?subject=Sarani%20support">Email support</a>
+  </div>
+
+  <h2>Getting started</h2>
+  <p>Sarani opens on today’s thread. Tap the message field to write. Each line becomes a bubble, and a line that records something — a meal, a purchase, something you watched, a person or a place — is offered as a record underneath it. Confirm it to file it, or ignore it and the prose stays prose.</p>
+  <p>The Library holds the days, the tables and the pages for people and places. Settings holds appearance, Face ID, export and the optional connections.</p>
+
+  <h2>Common questions</h2>
+  <div class="faq">
+    <h3>Where is my journal stored?</h3>
+    <p>On your iPhone, in an encrypted database. The keys live in the iOS Keychain with this-device-only protection. We do not have a copy and cannot read it.</p>
+
+    <h3>Does Sarani sync between devices?</h3>
+    <p>Not yet. There is no account, no cloud and no sync. A journal belongs to the device that wrote it. To move one, use <strong>Settings → Export journal</strong> and keep the exported file somewhere safe.</p>
+
+    <h3>How do I back up my journal?</h3>
+    <p>Use <strong>Settings → Export journal</strong>. An export is a plaintext copy, so store it somewhere you trust. Device backups may include the encrypted database, but the separate encryption keys are this-device-only and are not backed up, so a backup is not a reliable way to move a journal to a new phone.</p>
+
+    <h3>I deleted the app. Can you restore my journal?</h3>
+    <p>No. There is no server copy and no account. Deleting the app deletes the journal. If you have an export, it can be imported into a fresh install.</p>
+
+    <h3>Why does Sarani ask for Face ID?</h3>
+    <p>To unlock the journal. iOS performs the match and Sarani only learns whether it succeeded. Face ID is currently always on; you can turn it off in iOS Settings if you prefer the device passcode.</p>
+
+    <h3>How do I delete my data?</h3>
+    <p>Delete the app. That removes the journal database and attachments from the device. iOS may retain a wrapped key in the Keychain, but it cannot read the deleted database. Erasing the device removes it.</p>
+
+    <h3>Voice notes are not transcribing</h3>
+    <p>Check that Microphone and Speech Recognition are allowed in iOS Settings → Sarani. Transcription runs on the device and needs a supported language pack; if the language is not available, the recording is still saved and you can play it back.</p>
+
+    <h3>The Health connection is missing or empty</h3>
+    <p>State of Mind is available on iOS 18 and later, and only when you have logged moods in Apple Health. Open the Health connection in Settings, grant read access, then choose <strong>Sync now</strong>. Sarani never writes to Health.</p>
+
+    <h3>Journaling Suggestions do not appear</h3>
+    <p>Suggestions come from Apple and are not available in every region or on every device. The rest of the journal, including the on-device parser, works without them.</p>
+
+    <h3>How do I save a link or page into Sarani?</h3>
+    <p>Use the iOS share sheet from Safari or another app and choose Sarani. The share extension stores the link in the app group and opens the app. One link or one piece of text at a time.</p>
+
+    <h3>How do I connect Simkl?</h3>
+    <p>Open <strong>Settings → Simkl</strong>, start the PIN flow, and enter the code on Simkl’s site. The token is stored locally. Disconnect at any time from the same screen.</p>
+
+    <h3>Does Sarani work on iPad?</h3>
+    <p>Yes, on iPad running iOS 17 or later. The layout is designed for a phone first.</p>
+
+    <h3>Which iOS versions are supported?</h3>
+    <p>iOS 17 and later. Health mood mirroring needs iOS 18 or later, and Apple’s Foundation Models parser needs iOS 26 or later. On older versions Sarani uses its own deterministic parser, which handles the common record lines without a model.</p>
+  </div>
+
+  <h2>Privacy</h2>
+  <p>Read the <a href="privacy.html">privacy policy</a> for exactly what stays on the device, what the optional connections send, and how deletion works.</p>
+
+  <h2>Report a security issue</h2>
+  <p>Please email <a href="mailto:raraventuresllc@gmail.com?subject=Sarani%20security">raraventuresllc@gmail.com</a> with “security” in the subject. Do not include journal content in the report.</p>
+</main>
+<footer class="wrap">
+  <nav><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+  <div>© 2026 Rara Ventures LLC</div>
+</footer>
+</body>
+</html>
