@@ -12,7 +12,7 @@
   .wrap { width:min(780px,calc(100% - 40px)); margin:0 auto; }
   header { padding:72px 0 52px; background:radial-gradient(120% 120% at 50% 0%,#fff6ec 0%,var(--paper) 62%); border-bottom:1px solid var(--line); }
   .mark { display:inline-flex; align-items:center; gap:12px; }
-  .disc { width:46px; height:46px; border-radius:23px; background:linear-gradient(180deg,#ffa24d,#e56100); color:#fff; font-weight:600; font-size:24px; display:flex; align-items:center; justify-content:center; box-shadow:0 12px 28px rgba(229,97,0,.28); }
+  .disc { width:46px; height:46px; border-radius:11px; object-fit:cover; box-shadow:0 12px 28px rgba(229,97,0,.28); }
   .badge { font-size:13px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--brand); }
   h1 { font-size:clamp(36px,6.3vw,58px); line-height:1.03; letter-spacing:-.035em; margin:22px 0 16px; max-width:15ch; }
   h2 { font-size:24px; letter-spacing:-.02em; margin:40px 0 10px; }
@@ -42,7 +42,7 @@
 <body>
 <header>
   <div class="wrap">
-    <div class="mark"><span class="disc">S</span><span class="badge">Sarani</span></div>
+    <div class="mark"><img class="disc" src="icon.png" width="46" height="46" alt=""><span class="badge">Sarani</span></div>
     <h1>A journal shaped like a conversation.</h1>
     <p class="lead">Each entry is a bubble. Each day is a thread. Sarani is private by design: your words, photos, voice notes and video are encrypted on your iPhone, and nothing is sent to us.</p>
     <div class="actions">
